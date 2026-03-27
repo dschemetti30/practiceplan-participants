@@ -116,7 +116,7 @@
 
   .hero-inner {
     position: relative; z-index: 1;
-    max-width: 560px; margin: 0 auto; width: 100%;
+    max-width: 680px; margin: 0 auto; width: 100%;
   }
 
   @keyframes fadeUp { from{opacity:0;transform:translateY(16px)} to{opacity:1;transform:translateY(0)} }
@@ -143,7 +143,7 @@
   .hero-sub {
     font-size: 0.95rem;
     color: var(--gray-500); line-height: 1.75;
-    max-width: 420px; margin: 0 auto 28px; font-weight: 400;
+    max-width: 540px; margin: 0 auto 28px; font-weight: 400;
     animation: fadeUp 0.5s ease-out 0.2s both;
   }
 
@@ -201,7 +201,7 @@
   }
 
   /* ===== STEPS ===== */
-  .steps-section { padding: 60px 24px 56px; max-width: 660px; margin: 0 auto; }
+  .steps-section { padding: 60px 24px 56px; max-width: 900px; margin: 0 auto; }
   .section-eyebrow { font-size: 0.68rem; font-weight: 700; color: var(--blue); letter-spacing: 2px; text-transform: uppercase; margin-bottom: 8px; }
   .section-title { font-size: clamp(1.35rem, 3.5vw, 1.8rem); font-weight: 800; color: var(--gray-900); letter-spacing: -0.5px; margin-bottom: 36px; line-height: 1.2; }
 
@@ -249,7 +249,7 @@
   .divider { height: 1px; background: var(--gray-100); margin: 0 24px; }
 
   /* ===== FAQ ===== */
-  .faq-section { padding: 60px 24px 56px; max-width: 660px; margin: 0 auto; }
+  .faq-section { padding: 60px 24px 56px; max-width: 900px; margin: 0 auto; }
   .faq-item { border-bottom: 1px solid var(--gray-100); }
   .faq-item:first-child { border-top: 1px solid var(--gray-100); }
   .faq-trigger {
@@ -292,7 +292,7 @@
   .fee-note strong { font-weight: 700; color: #5c4208; }
 
   /* ===== BOTTOM CTA ===== */
-  .bottom-cta-wrap { padding: 0 24px 60px; max-width: 660px; margin: 0 auto; }
+  .bottom-cta-wrap { padding: 0 24px 60px; max-width: 900px; margin: 0 auto; }
   .bottom-cta {
     border-radius: 16px; overflow: hidden; position: relative;
     background: var(--blue);
@@ -318,7 +318,7 @@
 
   /* ===== FOOTER ===== */
   footer { border-top: 1px solid var(--gray-100); padding: 28px 24px; text-align: center; }
-  .footer-inner { max-width: 660px; margin: 0 auto; }
+  .footer-inner { max-width: 900px; margin: 0 auto; }
   .footer-logo { display: inline-flex; align-items: center; text-decoration: none; margin-bottom: 12px; }
   .footer-logo svg { height: 18px; width: auto; }
   footer p { font-size: 0.77rem; color: var(--gray-500); line-height: 1.7; font-weight: 400; }
@@ -431,6 +431,18 @@
     .mid-cta { flex-direction: row; align-items: center; }
     .btn-mid { width: auto; }
   }
+
+  /* --- Wide desktop (900px+) --- */
+  @media (min-width: 900px) {
+    nav { padding: 0 60px; }
+    .hero { padding: 80px 60px 0; }
+    .hero-photo-row { height: 240px; }
+    .steps-section, .faq-section { padding: 80px 60px 76px; }
+    .bottom-cta-wrap { padding: 0 60px 80px; }
+    .divider { margin: 0 60px; }
+    .bottom-cta { padding: 56px 48px; }
+    .admin-banner { padding: 9px 60px; }
+  }
 </style>
 </head>
 <body>
@@ -507,7 +519,7 @@
       <div class="photo-label">Auditorium</div>
     </div>
     <div class="hero-photo-item">
-      <img src="https://images.unsplash.com/photo-1570103489968-f4b8a7891bdb?w=400&q=75&auto=format&fit=crop&crop=center" alt="Meeting room" loading="lazy">
+      <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?w=400&q=75&auto=format&fit=crop&crop=center" alt="Meeting room" loading="lazy">
       <div class="photo-label">Meeting Room</div>
     </div>
   </div>
@@ -635,7 +647,7 @@
         <span class="faq-q">I have a question about rental rates, rules, or insurance requirements.</span>
         <span class="faq-icon"><svg viewBox="0 0 10 10" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M2 3.5l3 3 3-3"/></svg></span>
       </button>
-      <div class="faq-answer">Questions about rates, facility rules, availability, and insurance requirements should go directly to the school or organization you're renting from — not to PracticePlan. Look for their contact info on the school's website or in the email they sent you. For technical issues with the platform itself, reach out to <a href="mailto:info@practiceplan.io" style="color:var(--blue);font-weight:600;text-decoration:none;">info@practiceplan.io</a>.</div>
+      <div class="faq-answer">Questions about rates, facility rules, availability, and insurance requirements should go directly to the school or organization you're renting from — not to PracticePlan. Look for their contact info on the school's website or in the email they sent you. For technical issues with the platform itself, reach out to <a href="/cdn-cgi/l/email-protection#86efe8e0e9c6f6f4e7e5f2efe5e3f6eae7e8a8efe9" style="color:var(--blue);font-weight:600;text-decoration:none;"><span class="__cf_email__" data-cfemail="8ce5e2eae3ccfcfeedeff8e5efe9fce0ede2a2e5e3">[email&#160;protected]</span></a>.</div>
     </div>
 
   </div>
@@ -685,17 +697,8 @@
       </svg>
     </a>
     <p>Used by K-12 schools, colleges, churches, and municipalities across 23+ states to manage facility rentals.<br>
-    Platform questions? Email <a href="mailto:info@practiceplan.io">info@practiceplan.io</a> or visit <a href="https://www.practiceplan.io">practiceplan.io</a>.</p>
+    Platform questions? Email <a href="/cdn-cgi/l/email-protection#d0b9beb6bf90a0a2b1b3a4b9b3b5a0bcb1befeb9bf"><span class="__cf_email__" data-cfemail="137a7d757c5363617270677a7076637f727d3d7a7c">[email&#160;protected]</span></a> or visit <a href="https://www.practiceplan.io">practiceplan.io</a>.</p>
   </div>
 </footer>
 
-<script>
-function toggleFAQ(btn) {
-  var item = btn.closest('.faq-item');
-  var isOpen = item.classList.contains('open');
-  document.querySelectorAll('.faq-item.open').forEach(function(el) { el.classList.remove('open'); });
-  if (!isOpen) item.classList.add('open');
-}
-</script>
-</body>
-</html>
+<script data-cfasync=
