@@ -580,7 +580,7 @@
   <div class="faq-list">
 
     <div class="faq-item">
-      <button class="faq-trigger" onclick="toggleFAQ(this)">
+      <button class="faq-trigger" type="button">
         <span class="faq-q">Is there a fee to rent a facility?</span>
         <span class="faq-icon"><svg viewBox="0 0 10 10" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M2 3.5l3 3 3-3"/></svg></span>
       </button>
@@ -593,7 +593,7 @@
     </div>
 
     <div class="faq-item">
-      <button class="faq-trigger" onclick="toggleFAQ(this)">
+      <button class="faq-trigger" type="button">
         <span class="faq-q">Will my reservation be automatically approved?</span>
         <span class="faq-icon"><svg viewBox="0 0 10 10" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M2 3.5l3 3 3-3"/></svg></span>
       </button>
@@ -601,7 +601,7 @@
     </div>
 
     <div class="faq-item">
-      <button class="faq-trigger" onclick="toggleFAQ(this)">
+      <button class="faq-trigger" type="button">
         <span class="faq-q">Why does my school use PracticePlan? Is this official?</span>
         <span class="faq-icon"><svg viewBox="0 0 10 10" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M2 3.5l3 3 3-3"/></svg></span>
       </button>
@@ -609,7 +609,7 @@
     </div>
 
     <div class="faq-item">
-      <button class="faq-trigger" onclick="toggleFAQ(this)">
+      <button class="faq-trigger" type="button">
         <span class="faq-q">I can't find the school or venue I'm trying to book.</span>
         <span class="faq-icon"><svg viewBox="0 0 10 10" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M2 3.5l3 3 3-3"/></svg></span>
       </button>
@@ -617,7 +617,7 @@
     </div>
 
     <div class="faq-item">
-      <button class="faq-trigger" onclick="toggleFAQ(this)">
+      <button class="faq-trigger" type="button">
         <span class="faq-q">What types of spaces can I reserve?</span>
         <span class="faq-icon"><svg viewBox="0 0 10 10" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M2 3.5l3 3 3-3"/></svg></span>
       </button>
@@ -635,7 +635,7 @@
     </div>
 
     <div class="faq-item">
-      <button class="faq-trigger" onclick="toggleFAQ(this)">
+      <button class="faq-trigger" type="button">
         <span class="faq-q">Can I cancel or change my reservation?</span>
         <span class="faq-icon"><svg viewBox="0 0 10 10" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M2 3.5l3 3 3-3"/></svg></span>
       </button>
@@ -643,7 +643,7 @@
     </div>
 
     <div class="faq-item">
-      <button class="faq-trigger" onclick="toggleFAQ(this)">
+      <button class="faq-trigger" type="button">
         <span class="faq-q">I have a question about rental rates, rules, or insurance requirements.</span>
         <span class="faq-icon"><svg viewBox="0 0 10 10" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M2 3.5l3 3 3-3"/></svg></span>
       </button>
@@ -702,12 +702,21 @@
 </footer>
 
 <script>
-function toggleFAQ(btn) {
-  var item = btn.closest('.faq-item');
-  var isOpen = item.classList.contains('open');
-  document.querySelectorAll('.faq-item.open').forEach(function(el) { el.classList.remove('open'); });
-  if (!isOpen) item.classList.add('open');
-}
+document.addEventListener('DOMContentLoaded', function() {
+  var triggers = document.querySelectorAll('.faq-trigger');
+  triggers.forEach(function(trigger) {
+    trigger.addEventListener('click', function() {
+      var item = this.closest('.faq-item');
+      var isOpen = item.classList.contains('open');
+      document.querySelectorAll('.faq-item.open').forEach(function(el) {
+        el.classList.remove('open');
+      });
+      if (!isOpen) {
+        item.classList.add('open');
+      }
+    });
+  });
+});
 </script>
 </body>
 </html>
