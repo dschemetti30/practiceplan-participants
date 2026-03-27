@@ -647,7 +647,7 @@
         <span class="faq-q">I have a question about rental rates, rules, or insurance requirements.</span>
         <span class="faq-icon"><svg viewBox="0 0 10 10" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M2 3.5l3 3 3-3"/></svg></span>
       </button>
-      <div class="faq-answer">Questions about rates, facility rules, availability, and insurance requirements should go directly to the school or organization you're renting from — not to PracticePlan. Look for their contact info on the school's website or in the email they sent you. For technical issues with the platform itself, reach out to <a href="/cdn-cgi/l/email-protection#86efe8e0e9c6f6f4e7e5f2efe5e3f6eae7e8a8efe9" style="color:var(--blue);font-weight:600;text-decoration:none;"><span class="__cf_email__" data-cfemail="8ce5e2eae3ccfcfeedeff8e5efe9fce0ede2a2e5e3">[email&#160;protected]</span></a>.</div>
+      <div class="faq-answer">Questions about rates, facility rules, availability, and insurance requirements should go directly to the school or organization you're renting from — not to PracticePlan. Look for their contact info on the school's website or in the email they sent you. For technical issues with the platform itself, reach out to <a href="mailto:info&#64;practiceplan.io" style="color:var(--blue);font-weight:600;text-decoration:none;">info&#64;practiceplan.io</a>.</div>
     </div>
 
   </div>
@@ -697,8 +697,17 @@
       </svg>
     </a>
     <p>Used by K-12 schools, colleges, churches, and municipalities across 23+ states to manage facility rentals.<br>
-    Platform questions? Email <a href="/cdn-cgi/l/email-protection#d0b9beb6bf90a0a2b1b3a4b9b3b5a0bcb1befeb9bf"><span class="__cf_email__" data-cfemail="137a7d757c5363617270677a7076637f727d3d7a7c">[email&#160;protected]</span></a> or visit <a href="https://www.practiceplan.io">practiceplan.io</a>.</p>
+    Platform questions? Email <a href="mailto:info&#64;practiceplan.io" style="color:var(--blue);font-weight:600;text-decoration:none;">info&#64;practiceplan.io</a> or visit <a href="https://www.practiceplan.io">practiceplan.io</a>.</p>
   </div>
 </footer>
 
-<script data-cfasync=
+<script>
+function toggleFAQ(btn) {
+  var item = btn.closest('.faq-item');
+  var isOpen = item.classList.contains('open');
+  document.querySelectorAll('.faq-item.open').forEach(function(el) { el.classList.remove('open'); });
+  if (!isOpen) item.classList.add('open');
+}
+</script>
+</body>
+</html>
